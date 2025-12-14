@@ -1,0 +1,20 @@
+# --- Backend Ignored Files ---
+/Project_Tasks_Management/target/
+/Project_Tasks_Management/.mvn/wrapper/maven-wrapper.properties
+/Project_Tasks_Management/*.iml
+/Project_Tasks_Management/.settings/
+/Project_Tasks_Management/.classpath
+/Project_Tasks_Management/.project
+*.class
+
+# --- Frontend Ignored Files ---
+/project-management-frontend/node_modules/
+/project-management-frontend/build/
+/project-management-frontend/dist/
+/project-management-frontend/.env
+
+# --- System & Docker ---
+.DS_Store
+.idea/
+.vscode/
+postgres_data/
