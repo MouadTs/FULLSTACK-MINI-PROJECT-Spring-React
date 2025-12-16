@@ -105,6 +105,17 @@ The application uses JWT. You must register a user or login via the `/api/auth/l
 
 ---
 
+## 📹 Demonstration Video
+
+Watch the full demo here:  
+[![Project Demo](https://cdn.loom.com/sessions/thumbnails/50f58b3376dc43e3af7507532f4e04f9-with-play.gif)](https://www.loom.com/share/50f58b3376dc43e3af7507532f4e04f9)
+
+Or click the link to view the full video:  
+[https://www.loom.com/share/50f58b3376dc43e3af7507532f4e04f9](https://www.loom.com/share/50f58b3376dc43e3af7507532f4e04f9)
+
+
+---
+
 ## 📸 Project Status
 *   [x] User Authentication
 *   [x] Project Creation
