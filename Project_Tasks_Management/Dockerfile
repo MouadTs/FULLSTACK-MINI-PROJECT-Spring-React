@@ -1,17 +1,28 @@
-# /frontend/Dockerfile
+# Use Eclipse Temurin OpenJDK 17 as the base image
+FROM eclipse-temurin:17-alpine
 
-# 1. Build the React App
-FROM node:18-alpine AS build
+# Set the working directory
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
 
-# 2. Serve with Nginx 
-FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
+# Copy the Maven wrapper and pom.xml
+COPY mvnw .
+COPY mvnw.cmd .
+COPY pom.xml .
 
+# Copy the source code
+COPY src ./src
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Make the Maven wrapper executable
+RUN chmod +x ./mvnw
+
+# Build the application
+RUN ./mvnw clean package -DskipTests
+
+# Copy the built JAR file
+COPY target/*.jar app.jar
+
+# Expose the port the app runs on
+EXPOSE 8080
+
+# Run the application
+CMD ["java", "-jar", "app.jar"]

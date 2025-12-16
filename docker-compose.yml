@@ -21,7 +21,7 @@ services:
       - db
     environment:
       # Note the 'mysql' in the URL and the correct driver
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/taskdb?allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/PG_Management?allowPublicKeyRetrieval=true&useSSL=false
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: password123
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
